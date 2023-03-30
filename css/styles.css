@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: goldenrod;
+  font-family: sans-serif;
+}
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+#wrapper {
+  background-color: #fcfcfc;
+  margin: 50px auto;
+  padding: 15px;
+  width: 80vw;
+  border: 2px navy solid;
+  border-radius: 10px;
+}
+label {
+  width: 100%;
+  display: block;
+}
+input[type=text] {
+  width: 80%;
+}
+.main-label {
+  font-weight: bold;
+  padding: 5px;
+}
+fieldset {
+  border: none;
+  margin-bottom: 15px;
+}
+@media (min-width: 700px) {
+  #user-name {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+@media (min-width: 700px) {
+  #user-address {
+    display: grid;
+    grid-template-columns: 40% 25% 15% 20%;
+  }
+}
+#user-contact #areaCode,
+#user-contact #phoneNumber {
+  display: inline;
+}
+#user-contact #areaCode {
+  width: 20%;
+  margin-right: 15px;
+}
+#user-contact #phoneNumber {
+  width: 55%;
+}
+@media (min-width: 700px) {
+  #user-contact {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+@media (min-width: 700px) {
+  #user-meal {
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
+  #user-meal #meal-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+}
+@media (min-width: 700px) {
+  #user-preferred {
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
+  #user-preferred #preferred-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+}
+#comments {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#submit,
+#reset {
+  padding: 5px 15px;
+  background-color: red;
+  color: #fcfcfc;
+  border: 2px goldenrod solid;
+  border-radius: 25px;
+  font-weight: bold;
+}
+#submit {
+  margin-right: 20px;
+}

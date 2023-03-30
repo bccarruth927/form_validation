@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMST 388 Registration Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main>
+        <section id="wrapper">
+            <header>
+                <h1>CSMT 388 Registration Form</h1>
+            </header>
+            <form action="#" name="myForm" onsubmit="">
+                <!--Fieldset containing the labels and inputs for the users name-->
+                <fieldset id="user-name">
+                    <div>
+                        <label for="fname" class="main-label">First Name:</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div>
+                        <label for="lname" class="main-label">Last Name:</label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                </fieldset>
+                <!--Fieldset containing the labels and inputs for the users address-->
+                <fieldset id="user-address">
+                    <div>
+                        <label for="address" class="main-label">Address:</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    <div>
+                        <label for="city" class="main-label">City:</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div>
+                        <label for="state" class="main-label">State:</label>
+                        <select id="state" name="state">
+                            <option value="">select</option>
+                            <option value="MD">Maryland</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="zip" class="main-label">Zipcode:</label>
+                        <input type="text" id="zip" name="zip">
+                    </div>
+                </fieldset>
+                <!--Fieldset containing the labels and inputs for the users contact methods-->
+                <fieldset id="user-contact">
+                    <div>
+                        <label for="area-code phone-number" class="main-label">Phone:</label>
+                        <input type="text" id="areaCode" name="areaCode"><input type="text" id="phoneNumber" name="phoneNumber">
+                    </div>
+                    <div>
+                        <label for="email" class="main-label">Email:</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div>
+                        <label for="confirmEmail" class="main-label">Confirm Email:</label>
+                        <input type="text" id="confirmEmail" name="confirmEmail">
+                    </div>
+                </fieldset>
+                <!--Fieldset containing the labels and inputs for the users preferred meals-->
+                <fieldset id="user-meal">
+                    <div>
+                        <label for="vegan vegetarian non-vegetarian" class="main-label">Meal Preferences:</label>
+                    </div>
+                    <div id="meal-inline">
+                        <label for="vegan" class="inline"><input type="radio" id="vegan" name="mealPreference" value="vegan"> Vegan</label>
+                        <label for="vegetarian" class="inline"><input type="radio" id="vegetarian" name="mealPreference" value="vegetarian"> Vegetarian</label>
+                        <label for="non-vegetarian" class="inline"><input type="radio" id="non-vegetarian" name="mealPreference" value="non-vegetarian"> Non-vegetarian</label>
+                    </div>
+                </fieldset>
+                <!--Fieldset containing the labels and inputs for the users preferred methods of contact-->
+                <fieldset id="user-preferred">
+                    <div>
+                        <label for="phone-method email-method mail-method linkedin-method" class="main-label">Contact Methods</label>
+                    </div>
+                    <div id="preferred-inline">
+                        <label><input type="checkbox" id="phone-method" name="chk"> Phone</label>
+                        <label><input type="checkbox" id="email-method" name="chk"> Email</label>
+                        <label><input type="checkbox" id="mail-method" name="chk"> Mail</label>
+                        <label><input type="checkbox" id="linkedin-method" name="chk"> LinkedIn</label>
+                    </div>
+                </fieldset>
+                <!--Fieldset containing the labels and inputs for the comments section-->
+                <div>
+                    <label for="comments" class="main-label">Comments</label>
+                </div>
+                <div>
+                    <textarea id="comments" name="comments" rows="5"></textarea>
+                </div>
+                <!--The submit and reset buttons-->
+                <input type="submit" id="submit" name="submit">
+                <button id="reset" name="reset">Reset</button>
+            </form>
+            <script src="js/app.js"></script>
+        </section>
+    </main>
+</body>
+
+</html>
