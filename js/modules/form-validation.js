@@ -27,27 +27,27 @@ const validate = (e) => {
     //Conditional statements to determine if form inputs are valid
     if (!fname.value.match(lettersRegEx)) { //Conditional checking for the validity of the first name
         document.myForm.fname.focus();
-        alert('Please provide a valid first name!');
+        alert('Please enter a valid first name!');
         return false;
     }
     if (!lname.value.match(lettersRegEx)) { //Conditional checking for the validity of the last name
         document.myForm.lname.focus();
-        alert('Please provide a valid last name!');
+        alert('Please enter a valid last name!');
         return false;
     }
     if (!address.value.match(addressRegEx)) { //Conditional checking for the validity of the street address
         document.myForm.address.focus();
-        alert('Please provide a valid street address!');
+        alert('Please enter a valid street address! Abbreviate street types like Ln., Ct., Ave., etc.');
         return false;
     }
     if (!city.value.match(spacedLettersRegEx)) { //Conditional checking for the validity of the city
         document.myForm.city.focus();
-        alert('Please provide a valid city!');
+        alert('Please enter a valid city!');
         return false;
     }
     if (state.value == "") { //Conditional checking for the validity of the state
         document.myForm.state.focus();
-        alert('Please select a state of residency!');
+        alert('Please select a valid U.S. state!');
         return false;
     }
     if (!zip.value.match(zipcodeRegEx)) { //Conditional checking for the validity of the zipcode
@@ -57,12 +57,12 @@ const validate = (e) => {
     }
     if (!areaCode.value.match(areaCodeRegEx)) { //Conditional checking for the validity of the area code
         document.myForm.areaCode.focus();
-        alert('Please enter a valid area code!');
+        alert('Please enter a valid phone area code!');
         return false;
     }
     if (!phoneNumber.value.match(phoneNumberRegEx)) { //Conditional checking for the validity of the phone number
         document.myForm.phoneNumber.focus();
-        alert('Please enter a valid phone number!');
+        alert('Please enter a valid seven digit phone number!');
         return false;
     }
     if (!email.value.match(emailRegEx)) { //Conditional checking for the validity of the email address
@@ -72,7 +72,7 @@ const validate = (e) => {
     }
     if (confirmEmail.value != email.value) { //Conditional checking that the value matches the email input
         document.myForm.confirmEmail.focus();
-        alert('Please use the same email address previously entered!');
+        alert('Please enter the same email from earlier input!');
         return false;
     }
     for (i = 0; i < mealPreference.length; i++) { //For loop to iterate through the radio button options
@@ -81,7 +81,7 @@ const validate = (e) => {
         }
     }
     if (i == mealPreference.length) { //Conditional for if the for loop iterates through all radio buttons without one checked an error message appears
-        alert('Please select a meal preference!');
+        alert('Please select a meal preference option!');
         return false;
     }
     for (j = 0; j < checkboxes.length; j++) { //For loop to iterate through the checkbox options
@@ -92,7 +92,7 @@ const validate = (e) => {
     if (newVar == 0 || newVar < 2 || newVar > 2) { //Conditional to verify that only 2 checkboxes are selected
         newVar = 0;
         uncheckAll();
-        alert('Please select two contact preferences');
+        alert('Please select two preferred contact methods!');
         return false;
     }
 };
